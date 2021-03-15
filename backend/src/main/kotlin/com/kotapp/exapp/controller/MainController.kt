@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*
 import kotlin.random.Random
 
 @RestController
-@RequestMapping(("/api"))
+@RequestMapping("/api")
 class MainController{
 
     @GetMapping("/greetings")

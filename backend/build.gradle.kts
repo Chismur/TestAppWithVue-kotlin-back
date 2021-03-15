@@ -17,15 +17,21 @@ repositories {
 }
 
 dependencies {
-	runtimeOnly(project(":kotlin-front"))
+	runtimeOnly(project(":front"))
+	//spring frameworks
+	runtimeOnly("org.springframework.boot:spring-boot-devtools:2.1.3.RELEASE")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-mustache")
+	//kotlin
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	runtimeOnly("org.springframework.boot:spring-boot-devtools:2.1.3.RELEASE")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	//swagger
+	api("io.springfox:springfox-boot-starter:3.0.0")
+	api("io.springfox:springfox-swagger-ui:3.0.0")
+	//open-api gen
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}

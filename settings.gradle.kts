@@ -1,2 +1,2 @@
 rootProject.name = "exapp"
-include(":kotlin-front", ":backend")
+include(":front", ":backend")
